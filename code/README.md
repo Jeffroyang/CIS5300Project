@@ -19,4 +19,5 @@ To train each of the listed models, follow the directions below:
     - Change the runtime type to include GPU support: `Runtime -> Change runtime type -> Select T4 GPU`. If training PEGASUS/SentenceBERT, please use a higher end GPU such as V100 or A100.
 
 3. **Getting Results**:
-    - To obtain the results of our models, you can simply run all the cells in each of the notebooks. The results are also saved in the outputs directory if you don't wish to rerun the entire notebook.
+    - To obtain the results of our models, you can simply run all the cells in each of the notebooks. More annotations and instructions can be found in the notebooks themselves.
+    - The results are also saved in the outputs directory if you don't wish to rerun the entire notebook.
