@@ -64,7 +64,7 @@ rougeL:  0.6274509803921569
 
 ### Definition
 
-BERTScore is a metric that uses BERT embeddings to compute the similarity between two sentences. Contextual embeddings are computed for each token in both sentences with BERT, then each token is matched to the token in the other sentence with the highest cosine similarity. The BERTScore is the average of the cosine similarities between the matched tokens. Formally, this can be defined as:
+BERTScore is a metric that uses BERT embeddings to compute the similarity between two sentences. Contextual embeddings are computed for each token in both sentences with BERT, then each token is matched to the token in the other sentence with the highest cosine similarity. The BERTScore precision and recall is then calculated as the average of the cosine similarities between the matched tokens in both directions. Formally, this can be defined as:
 
 $Recall = R_{BERT} = \frac{1}{|x|} \sum_{x_i \in x} max_{\hat{x_j} \in \hat{x}} x_i^T\hat{x_j}$
 
