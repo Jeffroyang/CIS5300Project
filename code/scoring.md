@@ -30,7 +30,7 @@ To run the provided ROUGE script, the PyPI package `rouge-score` needs to be ins
 
 Then, to output the average ROUGE-1, ROUGE-2, and ROUGE-L scores between a prediction file and a reference file, run:
 
-```python rouge.py --p <prediction_file> --r <reference_file>```
+```python rouge.py -p <prediction_file> -r <reference_file>```
 
 The prediction and reference files should be formatted with a single entry on each line, ordered the same way.
 
@@ -50,7 +50,7 @@ The product was good.
 
 Running the script with:
 
-```python rouge.py --p predictions.txt --r references.txt```
+```python rouge.py -p predictions.txt -r references.txt```
 
 will output:
 
@@ -87,13 +87,13 @@ pip install evaluate
 
 Then, similarly to the ROUGE script above, to output the average BERTScore between a prediction file and a reference file, run:
 
-```python bertscore.py --p <prediction_file> --r <reference_file>```
+```python bertscore.py -p <prediction_file> -r <reference_file>```
 
 The prediction and reference files should be formatted with a single entry on each line, ordered the same way.
 
 For example, running the script with the same prediction and reference files as above:
 
-```python bertscore.py --p predictions.txt --r references.txt```
+```python bertscore.py -p predictions.txt -r references.txt```
 
 will output:
 
