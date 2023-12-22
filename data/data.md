@@ -22,44 +22,49 @@ Here's an example for a review entry:
 ```
 
 ### Dataset Collection
-We source all of our data from [Amazon Review Data (2018)](https://nijianmo.github.io/amazon/index.html). We plan to incorporate a variety of these product categories in our dataset. Since we want a large amount of data while keeping an equal distribution across product categories, we chose to only include the datasets that have at least 25,000 reviews in our final dataset. We construct our dataset from the following categories:
+We source all of our data from [Amazon Review Data (2018)](https://nijianmo.github.io/amazon/index.html). We plan to incorporate a variety of these product categories in our dataset. We chose to include all the categories in our final dataset. The categories are as follows:
 ```
-["Arts, Crafts and Sewing",
- "Automotive",
- "Books",
- "CDs and Vinyl",
- "Cell Phones and Accessories",
- "Clothing, Shoes and Jewelry",
- "Digital Music",
- "Electronics",
- "Grocery and Gourmet Food",
- "Home and Kitchen",
- "Industrial and Scientific",
- "Kindle Store",
- "Luxury Beauty",
- "Movies and TV",
- "Musical Instruments",
- "Office Products",
- "Patio, Lawn and Garden",
- "Pet Supplies",
- "Prime Pantry",
- "Sports and Outdoors",
- "Tools and Home Improvement",
- "Toys and Games",
- "Video Games"]
+["AMAZON FASHION",
+"All Beauty",
+"Appliances",
+"Arts, Crafts and Sewing",
+"Automotive",
+"Books",
+"CDs and Vinyl",
+"Cell Phones and Accessories",
+"Clothing, Shoes and Jewelry",
+"Digital Music",
+"Electronics",
+"Gift Cards",
+"Grocery and Gourmet Food",
+"Home and Kitchen",
+"Industrial and Scientific",
+"Kindle Store",
+"Luxury Beauty",
+"Magazine Subscriptions",
+"Movies and TV",
+"Musical Instruments",
+"Office Products",
+"Patio, Lawn and Garden",
+"Pet Supplies",
+"Prime Pantry",
+"Software",
+"Sports and Outdoors",
+"Tools and Home Improvement",
+"Toys and Games",
+"Video Games"]
 ```
 We have performed the following steps to clean our data
 1. Read in the first 50,000 reviews from each product category
 2. Remove the `vote`, `image`, `style` columns since they have a lot of null entries
 3. Remove any null summary or null reviewText entries
-4. Sample 25,000 reviews from each product category
+4. Remove duplicate summaries
+4. Sample 500 reviews from each product category
 5. Perform training/dev/test split on each product category to be sized 80%/10%/10%
 6. Concatenate all of the respective training/dev/test sets together
-    - Final Training Dataset size: 460,000 reviews
-    - Final Validation Dataset size: 57,500 reviews
-    - Final Testing Dataset size: 57,500 reviews
-7. We will decide on text preprocessing steps in the future
-
+    - Final Training Dataset size: 11,095 rows
+    - Final Validation Dataset size: 1,387 rows
+    - Final Testing Dataset size: 1,388 rows
 
 ### Links
 - [Original Datasets](https://nijianmo.github.io/amazon/index.html)
