@@ -6,3 +6,6 @@ There are two evaluation scripts that you can run on the outputs. They are ROUGE
 
 - ```python rouge.py -p predictions.txt -r references.txt```
 - ```python bertscore.py -p predictions.txt -r references.txt```
+
+For example, from the root directory of the repository, you can use:
+```python code/bertscore.py -p outputs/pegasus/test_pred.txt -r outputs/pegasus/test_ref.txt```
